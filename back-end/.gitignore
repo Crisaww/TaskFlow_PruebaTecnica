@@ -1,0 +1,10 @@
+# Entornos virtuales (En mi caso es el venv)
+\venv
+\env
+
+# Archivo de compilación y migración
+\__pycache__
+\migrations
+
+# Base de datos local
+db.sqlite3

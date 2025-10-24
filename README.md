@@ -137,13 +137,13 @@ Estas librerias ayudan a que el frontend y el backend se comuniquen sin problema
     - Respuesta esperada (JSON):
 
       {
-      "id": 2,
-      "name": "Musica",
-      "owner": {
-      "id": 1,
-      "username": "Eloisa",
-      "email": "eloisa@gmail.com"
-      }
+        "id": 2,
+        "name": "Musica",
+        "owner": {
+            "id": 1,
+            "username": "Eloisa",
+            "email": "eloisa@gmail.com"
+        }
       }
 
     2. Obtener todas las categorias (GET) = http://127.0.0.1:8000/TaskFlow/api/category/
@@ -387,7 +387,7 @@ Estas librerias ayudan a que el frontend y el backend se comuniquen sin problema
       {
       "id": 1,
       "title": "La Mudanza",
-      "description": "¿Para que sirve Danzar?",
+      "description": "Cancion que catapultó a BadBunny",
       "owner": {
       "id": 1,
       "username": "Eloisa",

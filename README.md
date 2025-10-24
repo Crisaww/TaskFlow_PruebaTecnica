@@ -64,7 +64,7 @@ Estas librerias ayudan a que el frontend y el backend se comuniquen sin problema
     2. python -m venv venv
     3. venv\Scripts\activate
 
-3.  **Crear y activar el Entorno Virtual**
+3.  **Instalar dependencias**
 
     1. pip install -r requirements.txt
 

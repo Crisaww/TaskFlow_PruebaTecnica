@@ -108,6 +108,14 @@ class StatusViewSet(viewsets.ModelViewSet):
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
     permission_classes = [permissions.IsAuthenticated]
+    
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {"message": "Estado eliminado con éxito."},
+            status=status.HTTP_200_OK
+        )
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -119,6 +127,14 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+    
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {"message": "Categoría eliminada con éxito."},
+            status=status.HTTP_200_OK
+        )
 
 
 class TaskViewSet(viewsets.ModelViewSet):
@@ -139,3 +155,11 @@ class TaskViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+        
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {"message": "Tarea eliminada con éxito."},
+            status=status.HTTP_200_OK
+        )
